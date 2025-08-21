@@ -1,0 +1,36 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-primary: #000;
+  --color-bg: #f0f4f8;
+  --color-btn: #fff;
+  --bg-color-btn: #008bfe;
+  --bg-color-card: #fff;
+  --bg-color-rate: #cce8ff;
+  --bg-color-success: #09bb00;
+  --bg-color-fail: #d00303;
+  --font: "Roboto", sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+
+  font-family: var(--font), serif;
+  color: var(--color-primary);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*background-color: var(--color-bg);*/
+}
+
+a, button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
