@@ -16,21 +16,29 @@
 }
 
 body {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-
   font-family: var(--font), serif;
   color: var(--color-primary);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /*background-color: var(--color-bg);*/
 }
 
 a, button {
   cursor: pointer;
   outline: none;
   border: none;
+}
+
+.main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.top-title {
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
 }
