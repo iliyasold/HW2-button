@@ -1,10 +1,18 @@
 <script setup>
+import {ref} from "vue";
 import Button from './Button.vue'
 import CardNum from "../icons/CardNum.vue";
 
-const { word = "word" } = defineProps({
-  word: String,
-});
+// const { word = "word" } = defineProps({
+//   word: String,
+// });
+
+const Card = ref({
+  word: "dust-coat",
+  translation: "пыльник",
+  state: "closed",
+  status: "pending",
+})
 
 const reverseButton = () => {
   alert("Перевернулась")
@@ -16,12 +24,12 @@ const reverseButton = () => {
     <div class="card__inner-border">
       <CardNum class="card-number" CardNumber = 6 />
 
-      {{ word }}
+      {{ Card.word }}
 
-<!--      <Button class="reverse__btn card__btn cards-control" @click = "reverseButton">Перевернуть</Button>-->
+      <Button v-if="Card.state === 'closed'" class="reverse__btn card__btn cards-control" @click = "reverseButton">Перевернуть</Button>
        <!-- Или reverse__btn или marks__wrap -->
 
-      <span class="marks__wrap cards-control">
+      <span v-else="Card.state === 'opened'" class="marks__wrap cards-control">
         <Button class="mark__btn ok__btn card__btn" />
         <Button class="mark__btn fail__btn card__btn" />
       </span>

@@ -1,8 +1,7 @@
 <script setup>
-  import Button from "./components/Button.vue";
-  import Header from "./components/Header.vue";
-
-  import Card from "./components/Card.vue";
+import Button from "./components/Button.vue";
+import Header from "./components/Header.vue";
+import Card from "./components/Card.vue";
 </script>
 
 <template>
@@ -10,7 +9,7 @@
   <main class="main">
     <Button>Начать игру</Button>
 
-    <Card word = "dust-coat" />
+    <Card />
   </main>
 </template>
 
